@@ -1,0 +1,20 @@
+name: Primeiro CI DevOps
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  verificar-projeto:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar codigo do repositorio
+        uses: actions/checkout@v4
+
+      - name: Exibir mensagem
+        run: echo "Meu primeiro workflow CI esta funcionando!"
+
+      - name: Verificar arquivos
+        run: ls -la
