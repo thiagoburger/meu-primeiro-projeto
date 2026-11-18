@@ -24,3 +24,6 @@ jobs:
              test -f README.md
              test -f cadastro.txt
              echo "Todos os arquivos importantes foram encontrados!"
+
+      - name: Testar arquivo inexistente
+        run: test -f arquivo-que-nao-existe.txt
