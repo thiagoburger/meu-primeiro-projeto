@@ -18,3 +18,9 @@ jobs:
 
       - name: Verificar arquivos
         run: ls -la
+
+      - name: Validar arquivos importantes
+        run: |
+             test -f README.md
+             test -f cadastro.txt
+             echo "Todos os arquivos importantes foram encontrados!"
